@@ -15,8 +15,7 @@ async def on_ready():
         if isinstance(gc, discord.GroupChannel):
             try:
                 await gc.leave()
-                print(f'Successfull: {gc.name} | Sleeping for [4 seconds] to avoid rate limits.')
-                await asyncio.sleep(4)
+                print(f'Successfull: {gc.name}')
             except:
                 print(f'Failed: {gc.name}')
     print(f"GroupChannel leaver has finished!")
